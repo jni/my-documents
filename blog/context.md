@@ -42,7 +42,41 @@ available, and I think their method classes are intuitive, well justified, and
 useful. So, I proceed to parrot them below, along with my favourite tool and
 software choices for each.
 
-# Over-representation analysis tutorial
+# Over-representation analysis
+
+## Introduction
+
+This is the oldest, most common, most easily interpretable, and most
+well-developed of the bunch. As such, it is certainly the approach I recommend
+as a first stop. Though, as we will see, there are plenty of common pitfalls to
+avoid, and the results are not always any more interpretable than your original
+list of genes.
+
+Suppose we perform a simple experiment, say, compare the expression level of
+every gene in a set of tumour samples or a set of non-tumour samples. And say
+that we have such clean data that _exactly_ 947 genes have higher expression in
+tumour samples than normal ones. (They are all wildly statistically
+significant, and all others are very much non-significant.)
+
+Suppose further that we can categorise genes in the human genome into exactly
+two categories: "kinase" and "non-kinase". And that exactly 947 genes (out of
+thousands) are kinases. _And_, those 947 genes are exactly the 947 that are
+overexpressed in our tumour samples. Well, we would have a pretty strong hunch
+that kinases have something to do with tumours!
+
+But what if our overexpressed genes only contained 946 kinases? What about 522?
+Or 95? At which point do we decide that it's not an interesting number of
+kinases in our overexpressed gene list?
+
+And what if there's more than one interesting category of genes? What if, in
+addition to kinases, there's DNA binding proteins, methylases, and
+phosphatases?
+
+Over-representation analysis (ORA) provides the answer to these questions.
+
+## The hypergeometric test
+
+
 
 # Gene set enrichment analysis
 
