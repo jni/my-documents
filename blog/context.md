@@ -31,7 +31,7 @@ In 2012, Khatri _et al_. published a [review](
 http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002375)
 in PLoS Comp. Biol. of various methods for determining gene context for gene
 lists. (They refer to it as "pathway analysis", but that is a very overloaded
-term, which I prefer to reserve for methods that use gene networks information
+term, which I prefer to reserve for methods that use gene network information
 of various types.) I'm not a huge fan of the review in general, because it
 fails to prescribe any one method. Instead, the authors content themselves with
 a simple enumeration of some of the more popular methods/tools, attaching a
@@ -39,7 +39,7 @@ brief description of each.
 
 Having said that, they did very neatly categorise the various options
 available, and I think their method classes are intuitive, well justified, and
-useful. So, I proceed to repeat them below, along with my favourite tool and
+useful. So, I proceed to parrot them below, along with my favourite tool and
 software choices for each.
 
 # Over-representation analysis tutorial
