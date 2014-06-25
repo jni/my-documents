@@ -27,8 +27,8 @@ pursue in this tutorial.
 
 # Categorisation of context-generating methods
 
-In 2012, Khatri _et al_. published a [review](
-http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002375)
+In 2012, Khatri *et al*. published a
+[review](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1002375)
 in PLoS Comp. Biol. of various methods for determining gene context for gene
 lists. (They refer to it as "pathway analysis", but that is a very overloaded
 term, which I prefer to reserve for methods that use gene network information
@@ -54,13 +54,13 @@ list of genes.
 
 Suppose we perform a simple experiment, say, compare the expression level of
 every gene in a set of tumour samples or a set of non-tumour samples. And say
-that we have such clean data that _exactly_ 947 genes have higher expression in
+that we have such clean data that *exactly* 947 genes have higher expression in
 tumour samples than normal ones. (They are all wildly statistically
 significant, and all others are very much non-significant.)
 
 Suppose further that we can categorise genes in the human genome into exactly
 two categories: "kinase" and "non-kinase". And that exactly 947 genes (out of
-thousands) are kinases. _And_, those 947 genes are exactly the 947 that are
+thousands) are kinases. *And*, those 947 genes are exactly the 947 that are
 overexpressed in our tumour samples. Well, we would have a pretty strong hunch
 that kinases have something to do with tumours!
 
@@ -76,8 +76,52 @@ Over-representation analysis (ORA) provides the answer to these questions.
 
 ## The hypergeometric test
 
+The formal test of the above example is formulated as follows: given that there
+are $n$ genes labelled X out of $N$ genes total, and we have drawn $m$ genes
+at random from the set of all genes, what is the probability that $k$ or more
+of the drawn genes are labelled with category X? The answer is provided by the
+[hypergeometric
+distribution](http://mathworld.wolfram.com/HypergeometricDistribution.html).
+(See [this link](http://www.math.uah.edu/stat/urn/Hypergeometric.html) for
+helpful exercises relating to this distribution.)
+(See also John Cook's [awesome
+chart](http://www.johndcook.com/distribution_chart.html) detailing the
+relationship between various distributions.)
 
+\\[
+\begin{align}
+\Pr(X = k) & = & \frac{{m \choose k} {N - m \choose n - k}} {{N \choose n}} \\
+
+\Pr(X \geq k) & = & \textstyle \sum_{i=k}^{\min(n, m)}{\Pr(X = k)}
+\end{align}
+\\]
+
+The idea is that if the second probability is small, then we can conclude that
+our initial model (that we chose the genes at random, with regards to this
+label X) is false. (This is a *frequentist approach* and not exactly correct!
+But, we will deal with that later in this document.)
+
+## Using the test
+
+To use this overrepresentation analysis, we need a source of annotations:
+labels for the genes. A common source is the [Gene
+Ontology](http://www.geneontology.org/). This has a set of *hierarchical*,
+*overlapping* annotations of most genes in the genome. Let's break that down:
+
+- hierarchical: a gene that is a *promoter-region binding gene* is also a *DNA
+  binding gene*.
+- overlapping: a gene can be both DNA binding *and* have kinase activity.
+
+Other sources include [OMIM](http://www.omim.org/) and
+[GeneRIF](http://www.ncbi.nlm.nih.gov/gene/about-generif), but we will focus on
+GO because it is the most commonly used.
+
+We also need some genes! If you have your own list of genes, feel free to use
+it, but for the rest of us, we will select a subset from an arbitrary gene
+expression experiment.
 
 # Gene set enrichment analysis
 
 # Pathway analysis
+
+
