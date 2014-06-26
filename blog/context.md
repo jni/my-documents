@@ -108,9 +108,9 @@ labels for the genes. A common source is the [Gene
 Ontology](http://www.geneontology.org/). This has a set of *hierarchical*,
 *overlapping* annotations of most genes in the genome. Let's break that down:
 
-- hierarchical: a gene that is a *promoter-region binding gene* is also a *DNA
-  binding gene*.
-- overlapping: a gene can be both DNA binding *and* have kinase activity.
+- hierarchical: a gene that codes for a *promoter-region binding protein* also
+  codes for a *DNA binding protein*.
+- overlapping: a protein can be both DNA binding *and* have kinase activity.
 
 Other sources include [OMIM](http://www.omim.org/) and
 [GeneRIF](http://www.ncbi.nlm.nih.gov/gene/about-generif), but we will focus on
