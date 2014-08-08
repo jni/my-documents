@@ -16,7 +16,9 @@ embryos, obtained every 30 minutes for three days. I needed to process each
 image sequentially.
 
 The first problem was that even reading the metadata from the file [resulted
-in a Java out-of-memory error]()! With the help of Lee Kamentsky, one of the
+in a Java out-of-memory
+error](https://github.com/CellProfiler/python-bioformats/issues/8)!
+With the help of Lee Kamentsky, one of the
 creators of python-bioformats, I figured out that Java allocates a maximum
 memory footprint of just 256MB. With the raw metadata string occupying 27MB,
 this was not enough to contain the full structure of the parsed metadata tree.
@@ -82,14 +84,33 @@ reader = rdr.rdr
 names, sizes, resolutions = parse_xml_metadata(md)
 idx = 50 # arbitrary series for demonstration
 size = sizes[idx0]
-nt, nz = size0[:2]
-image5d = np.zeros(size, np.uint8)
+nt, nz = size[:2]
+image5d = np.empty(size, np.uint8)
 for t in range(nt):
     for z in range(nz):
         image5d[t, z] = rdr.read(z=z, t=t, series=idx, rescale=False)
 plt.imshow(image5d[nt//2, nz//2, :, :, 0])
 ```
 
+![2D slice from 5D volume](imshow_result.png)
+
+Boom. Using Python BioFormats, I've read in a small(ish) part of a
+quasi-terabyte image file, ready for further processing.
+
 Note: the dimension order here is time, z, y, x, channel, or TZYXC, which I
-_think_ is the most efficient way to read these files in. My [wrapper]() allows
-arbitrary dimension order, so it'll be good to use it to 
+*think* is the most efficient way to read these files in. My
+[wrapper](https://github.com/jni/lesion/blob/master/lesion/lifio.py#L181) allows
+arbitrary dimension order, so it'll be good to use it to figure out the fastest
+way to iterate through the volume.
+
+In my case, I'm looking to extract statistics from the stack at each time
+point and plot their evolution over time. Here's the min/max intensity of the
+[profile](https://github.com/jni/lesion/blob/master/lesion/trace.py) along the
+embryo for a sample stack:
+
+![min/max vs time](plot_result.png)
+
+I still need to clean up the code, in particular to detect bad images (no
+prizes for guessing which timepoint was bad here), but my point for now is that,
+thanks to Python BioFormats, doing your entire bioimage analysis in Python just
+got a heck of a lot easier.
