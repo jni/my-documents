@@ -109,7 +109,8 @@ Ontology](http://www.geneontology.org/). This has a set of *hierarchical*,
 *overlapping* annotations of most genes in the genome. Let's break that down:
 
 - hierarchical: a gene that codes for a *promoter-region binding protein* also
-  codes for a *DNA binding protein*.
+  codes for a *DNA binding protein*. All promoter-region binding proteins are
+  also DNA binding proteins.
 - overlapping: a protein can be both DNA binding *and* have kinase activity.
 
 Other sources include [OMIM](http://www.omim.org/) and
