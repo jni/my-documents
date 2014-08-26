@@ -119,7 +119,9 @@ GO because it is the most commonly used.
 
 We also need some genes! If you have your own list of genes, feel free to use
 it, but for the rest of us, we will select a subset from an arbitrary gene
-expression experiment.
+expression experiment, namely, that of Lappalainen *et al*, 2013. (This article
+is freely available on PubMed Central
+[here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3918453/).
 
 # Gene set enrichment analysis
 
