@@ -123,6 +123,19 @@ expression experiment, namely, that of Lappalainen *et al*, 2013. (This article
 is freely available on PubMed Central
 [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3918453/).
 
+You can download the feature counts (that is, how many reads were observed for
+each gene) [here](). We have looked for genes that are differentially expressed
+between males and females using [this Python gist](), obtaining, finally, a
+list of genes having a False Discovery Rate (FDR) lower than 0.01, found
+[here](). Additionally, we can separate these into up- and down-regulated
+genes ([here]() and [here]()). Now, we want to know which functional categories
+in GO are overrepresented in these lists.
+
+Download the gene lists linked above, then go to the
+[GOrilla homepage]().
+Paste your list of genes into the XXX box. For the background list box, include
+the full list of genes ([here]()).
+
 # Gene set enrichment analysis
 
 # Pathway analysis
