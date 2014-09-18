@@ -135,6 +135,11 @@ Download the gene lists linked above, then go to the
 [GOrilla homepage]().
 Paste your list of genes into the XXX box. For the background list box, include
 the full list of genes ([here]()).
+This is from the gene model file used to obtain read counts.
+
+GOrilla will return an image of the GO hierarchy, with the overrepresented
+categories highlighted in yellow, orange, and red (increasing levels of
+significance).
 
 # Gene set enrichment analysis
 
