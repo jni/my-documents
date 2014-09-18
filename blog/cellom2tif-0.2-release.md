@@ -150,3 +150,8 @@ def test_square():
 Oops! Although I have full test coverage, I've missed an error.
 But with that caveat in mind, full test coverage is a wonderful thing, and if
 you don't test something, you're *guaranteed* not to spot errors in it.
+
+## Turn on continuous integration with Travis
+
+Having tests is great, but it does you no good if you don't remember to run
+them. [Travis-CI](https://travis-ci.org) can help!
