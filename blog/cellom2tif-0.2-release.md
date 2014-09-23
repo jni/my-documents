@@ -155,3 +155,18 @@ you don't test something, you're *guaranteed* not to spot errors in it.
 
 Having tests is great, but it does you no good if you don't remember to run
 them. [Travis-CI](https://travis-ci.org) can help!
+
+"Continuous integration" is
+the practice of frequently running your test suite so that you never introduce
+long-lived bugs into your codebase. Once upon a time, the common practice was
+to pile on new features on a codebase. Then, come release time, there would be
+a feature freeze, and some time would be spent cleaning up code and removing
+bugs. In continuous integration, instead, no new feature is allowed into the
+codebase until it is (mostly) bug free, as demonstrated by the test suite.
+
+Travis CI is an online service that integrates with GitHub to run your test
+suite *each and every time* you commit code! This way you detect failures early
+and can correct them before you pile on too much dependent code, which could
+make debugging much more difficult.
+
+Turning on Travis for your own GitHub-hosted projects is pretty easy.
