@@ -131,6 +131,13 @@ list of genes having a False Discovery Rate (FDR) lower than 0.01, found
 genes ([here]() and [here]()). Now, we want to know which functional categories
 in GO are overrepresented in these lists.
 
+One important thing to note about testing these three different lists: many
+biological function annotations are direction-insensitive. For example, genes
+could be annotated as being involved in "cell cycle progression" whether they
+are promoters of inhibitors of such a function. Therefore, it makes sense to
+treat "significantly differentially expressed" genes, regardless of direction
+of change, as a coherent subset.
+
 Download the gene lists linked above, then go to the
 [GOrilla homepage]().
 Paste your list of genes into the XXX box. For the background list box, include
@@ -139,7 +146,22 @@ This is from the gene model file used to obtain read counts.
 
 GOrilla will return an image of the GO hierarchy, with the overrepresented
 categories highlighted in yellow, orange, and red (increasing levels of
-significance).
+significance):
+
+![GOrilla output]()
+
+From this point it is up to you to interpret the gene functions
+that come up as significant here! Automatic synthesis is an area of ongoing
+research, but not quite ready for primetime.
+
+Finally, note that GOrilla is just one tool for overrepresentation analysis.
+Here is a list of alternatives. They fundamentally do much of the same thing,
+but their interface (web-based, R, Python, etc.) might better suit your own
+purposes.
+
+* DAVID
+* GOstat
+* GOSeq
 
 # Gene set enrichment analysis
 
