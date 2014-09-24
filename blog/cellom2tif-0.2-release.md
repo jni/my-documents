@@ -151,6 +151,44 @@ Oops! Although I have full test coverage, I've missed an error.
 But with that caveat in mind, full test coverage is a wonderful thing, and if
 you don't test something, you're *guaranteed* not to spot errors in it.
 
+## Saving your test configuration
+
+It's a bit annoying having to to type out that big long command line each time
+you need to run your tests. You can place two configuration files at the root
+of your project to have these settings permanently activated.
+
+First, in `setup.cfg`, set up your pytest commandline using the `addopts` line:
+
+```
+[pytest]
+addopts = --ignore cellom2tif/tifffile.py --doctest-modules --cov-report term-missing --cov .
+```
+
+Then, each invocation to `py.test` will run with those options.
+
+(Notes:
+
+ * I included Christoph Gohlke's excellent
+[tifffile.py](http://www.lfd.uci.edu/~gohlke/code/tifffile.py.html) in my
+project, but I don't want to run those tests because it's an external library
+and I am missing some key test files.
+ * `--cov-report term-missing` displays to the terminal any line numbers not
+covered by your tests.)
+
+And second, coverage-specific options go in a file called `.coveragerc`:
+
+```
+[run]
+omit = *tifffile.py
+```
+
+Again, I tell the coverage engine to omit the external library from its
+analysis. Note the slight difference: above, we are telling the test engine not
+to run tests on `tifffile.py`. Here, we are saying, don't compute coverage for
+this file either. Without this `.coveragerc`, the coverage report *does* run
+and concludes that the coverage for `tifffile.py` is 0%. D'oh! Yes, I think
+it's dumb too.
+
 ## Turn on continuous integration with Travis
 
 Having tests is great, but it does you no good if you don't remember to run
