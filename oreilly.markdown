@@ -140,23 +140,111 @@ may well return for inspiration to the final code examples themselves.
 
 ### What problems does this book solve for its users?
 
+Many scientists and beginning programmers have learned basic Python
+programming, for example via Software Carpentry, online tutorials, or any
+of a number of massive open online courses (MOOCs). They may, however, struggle
+to apply this basic programming skill to more complex problems in their
+scientific domain.
 
+The SciPy library, and the ecosystem that has grown around it, are there for
+this purpose, but finding useful functions and using them correctly,
+efficiently, and in easily readable code are two different things. Readers will
+be able to learn by example from some of the best code available, selected to
+cover a wide range of SciPy and related libraries. (These include scikit-learn,
+scikit-image, toolz, and pandas.)
+
+Similarly, advanced readers may discover new, refreshing ways of looking at the
+libraries they use every day.
+
+Thus the book aims to point readers in the direction of excellent code in the
+scientific domain.
 
 ### List the four or five topics covered or features included that will provide the greatest benefit to readers or will be the most likely to excite them? 
 
-### Other Book Features and Video Offerings:
+The SciPy community (preface). Sounds dry but will include nice touches such as
+good package names, such as airspeed velocity and sux.
+
+n-dimensional image processing (includes numpy array memory representation,
+filters, processor cache and efficiency)
+
+Interesting applications of Fourier transforms
+
+toolz and streaming data processing
+
+sparse matrices: efficient use of internal storage structures
+
+## Other Book Features and Video Offerings:
+
 ### Is there a companion web site? If so, what do you plan to include on the site? Would you be willing to participate in video offerings as well as workshops and training seminars?
 
-Competition:
-What books or online resources compete with this book? Please list the title and author. In each case, how will your book be different or better in timing, content, coverage, approach, or tone?
+I'm not sure how much O'Reilly would be comfortable with me putting on a
+companion site, but I would ideally like to have IPython Notebooks
+corresponding to each chapter so that readers can modify and play with the code
+to their heart's content.
 
+I would certainly be willing to participate in video workshops and seminars,
+and have done so for example in the scikit-image tutorial at SciPy 2014, which
+was extremely successful, recorded, and posted on YouTube.
 
+## Competition:
 
-Book Outline (chapter level is fine):
+### What books or online resources compete with this book? Please list the title and author. In each case, how will your book be different or better in timing, content, coverage, approach, or tone?
 
+The online documentation for SciPy, and blogs, are the biggest competition
+here. The SciPy community is becoming large enough that there are plenty of
+resources online to learn about using it. There are three key differences
+between this book and what you can get from online tutorials:
 
-Specs and Schedule:
-How many pages do you expect the book to be?
+ - Reference guides, such as the
+   [SciPy reference](http://docs.scipy.org/doc/scipy-0.14.0/reference/), tell
+   you about the inputs and outputs of individual functions, but do not provide
+   a good idea about how to compose those functions together to achieve a
+   scientific goal.
+ - Blog posts are often aimed at someone of similar skill level as the writer.
+   This book will ensure that each chapter is interesting to novices and
+   advanced readers alike.
+ - Blog posts vary widely in quality; this book will be carefully curated and
+   proofread to ensure only the highest quality code is included.
 
-How long do you expect it to take you to write the book?
+Several books have addressed the use of Python for scientific data analysis.
+Examples include Pandas, Astropy, PyMCMC. Those books are much more focused
+to specific tasks. Here, we instead aim for broad coverage of SciPy.
 
+## Book Outline (chapter level is fine):
+
+*Preface:* why SciPy? Ecosystem and community. Conventions (e.g. NumPy docstring
+conventions).
+
+*Chapter 1:* Image segmentation using `ndimage.generic_filter`. This includes
+an introduction to the NumPy array, memory layout, strides, F- and
+C-contiguity, 1D, 2D, and nD filters, and finally filtering to produce a graph
+and segmentation from that graph. (This may be broken down into several
+smaller chapters.)
+
+*Chapter 2:* Fourier Transforms. (Need to find a killer application/use for
+this one, but it's a central enough topic that it will be a high priority to
+include such an example.)
+
+*Chapter 3:* Use of sparse matrices to evaluate clustering accuracy.
+
+*Chapter 4:* Eigendecomposition. (Same as FTs.)
+
+*Chapter 5:* Optimization. (idem)
+
+*Chapter 6:* Streaming data. (idem, but specifically want to include use of
+Matt Rocklin's Toolz)
+
+*Chapter 7:* Basic statistics.
+
+... Perhaps additional chapters with awesome examples using scikit-learn,
+scikit-image, pandas, astropy, etc.
+
+## Specs and Schedule:
+
+### How many pages do you expect the book to be?
+
+Unsure yet.
+
+### How long do you expect it to take you to write the book?
+
+Unsure. 6mo? Looking for guidance given similar books.
