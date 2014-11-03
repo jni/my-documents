@@ -74,7 +74,7 @@ I'm very passionate about teaching, and about good writing.
 Finally, reviewing code for scikit-image pull requests, I've developed an
 eye for what great code looks like. Some examples will be from those pull
 requests, but the majority will come from polling developers from the
-Scientific Python ecosystem, many of which I know personally from two SciPy
+Scientific Python ecosystem, many of whom I know personally from two SciPy
 conferences, EuroSciPy 2013, and PyConAu 2014.
 
 ## Book Summary:
@@ -95,7 +95,8 @@ using them as motivation to teach readers who have never used them before.
 The examples will be chosen to highlight clever, elegant uses of advanced
 features of NumPy, SciPy, and related libraries. The beginning reader will
 learn not the functionality of the library, but its application to real
-world problems using beautiful code. 
+world problems using beautiful code. The book will start from first principles
+and provide all of the necessary background to understand each example.
 
 ### Briefly explain the technology and why it is important.
 
@@ -123,8 +124,8 @@ see this plot by Chris Beaumont, an astrophysicist at Harvard:
 ![Python v IDL](https://pbs.twimg.com/media/By43l0FIEAEJ0E6.png:large)
 
 (Source:
-[Twitter](https://twitter.com/BeaumontChris/status/517412133181865984)),
-Code: [NBViewer](http://t.co/NwzzReuzfe))
+[Twitter](https://twitter.com/BeaumontChris/status/517412133181865984).
+Code: [NBViewer](http://t.co/NwzzReuzfe).)
 
 The SciPy conference has also grown dramatically over the past few years.
 
@@ -171,7 +172,7 @@ Interesting applications of Fourier transforms
 
 toolz and streaming data processing
 
-sparse matrices: efficient use of internal storage structures
+sparse matrices: effective use of internal storage structures
 
 ## Other Book Features and Video Offerings:
 
@@ -237,7 +238,9 @@ Matt Rocklin's Toolz)
 *Chapter 7:* Basic statistics.
 
 ... Perhaps additional chapters with awesome examples using scikit-learn,
-scikit-image, pandas, astropy, etc.
+scikit-image, pandas, astropy, etc. The exact contents will be determined by
+code submissions, which will be triaged to canvas as wide a footprint of SciPy
+as possible.
 
 ## Specs and Schedule:
 
