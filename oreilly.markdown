@@ -10,16 +10,13 @@ Author(s): **Juan Nunez-Iglesias** (1-2 additional co-author(s) TBD)
 
 Author title(s) and affiliation(s):
 
-JNI: Research Scientist, Victorian Life Science Computation Initiative, University of Melbourne
+**JNI: Research Scientist, Victorian Life Science Computation Initiative, University of Melbourne**
 
 Preferred mailing address(es):
 
-<b>Juan Nunez-Iglesias
-
-VLSCI
-
-187 Grattan Street
-
+<b>Juan Nunez-Iglesias  
+VLSCI  
+187 Grattan Street  
 Carlton, VIC, 3010</b>
 
 Preferred phone number: +61 416 155574
@@ -81,16 +78,15 @@ conferences, EuroSciPy 2013, and PyConAu 2014.
 
 ### In one sentence, tell us why the audience will want to buy your book.
 
-Beginners will find it an entertaining way to learn about SciPy, while
-masters will also be interested to see the great code that motivates each
-chapter.
+Scientists seeking to take their Python to the next level will want to learn by
+example from the very best code.
 
 ### Summarize what the book is about, like you would pitch it to a potential reader on the back cover.  What makes your book unique in the marketplace?
 
 NumPy and SciPy form the core of the Scientific Python ecosystem. They also
 have excellent online documentation, so a complete reference would be
 pointless. Instead, we present the best code using these libraries,
-using them as motivation to teach readers who have never used them before.
+using it as motivation to teach readers who have never used them before.
 
 The examples will be chosen to highlight clever, elegant uses of advanced
 features of NumPy, SciPy, and related libraries. The beginning reader will
@@ -98,22 +94,53 @@ learn not the functionality of the library, but its application to real
 world problems using beautiful code. The book will start from first principles
 and provide all of the necessary background to understand each example.
 
+This book will introduce readers to Scientific Python and its community, show
+them the fundamental parts of SciPy and related libraries, and give them a
+taste for beautiful, easy-to-read code, which they can carry with them to their
+practice.
+
 ### Briefly explain the technology and why it is important.
+
+The SciPy software library implements a rather disjointed set of scientific
+data processing functions, such as statistics, signal processing, image
+processing, and function optimization. It is built on top of the numerical
+array computation library NumPy. On top of these two libraries, an entire
+ecosystem of apps and libraries has grown dramatically over the past few years
+(see the "how many people will use this technology" section), spanning
+disciplines as broad as astronomy, biology, meteorology and climate science,
+and materials science.
+
+This growth shows no sign of abating.  The Software Carpentry organization,
+which teaches Python to scientists, currently cannot keep up with demand, and
+is running "teacher training" every quarter, with a long waitlist. (I am
+enrolled in the current session, finishing this year.)
+
+In short, SciPy and related libraries will be driving much of scientific data
+analysis for years to come.
 
 ## Audience:
 
 ### Explain who the primary audience is for your book. What skills can you assume they have mastered?
 
 A reader should be familiar with the Python programming language. There should
-be no other requirements to understand the book. The primary audience will be
-novice-to-intermediate programmers who want to apply Python to a problem
-requiring scientific libraries. For example, anyone who has recently taken a
-Software Carpentry Python workshop would be interested in the book.
+be no other requirements to understand the book. We have two key audiences,
+who have similar levels of experience and understanding:
 
-A secondary audience is the more advanced practitioners of scientific Python
+ 1. Those fresh out of a Software Carpentry Python tutorial. They signed up
+    because they want to do more sophisticated things with their data than
+    software such as Excel allows. They have seen Python, and have ideas about
+    variables, functions, loops, and even a bit of NumPy, but they don't know
+    about the SciPy stack and they certainly don't know best practices, how easy
+    it is to join the community and contribute, etc.
+ 2. The self-taught scientists. (This was me once upon a time.) They have read
+    some Python tutorials online, and have downloaded some analysis scripts from
+    another lab or a previous member of their own lab, and have fiddled with them.
+    But they don't have any solid concepts about what constitutes "good code".
+
+(A secondary audience is the more advanced practitioners of scientific Python
 programming, who might be interested in the advanced examples motivating each
 lesson. After all, I fall into this category and the examples will be chosen
-because I and similar programmers find them beautiful and insightful.
+because I and similar programmers find them beautiful and insightful.)
 
 ### Please estimate as best you can how many people will use this technology? Please state any applicable statistics (e.g., web searches, web site traffic, blogs) indicating market use or market growth.
 
@@ -154,11 +181,18 @@ be able to learn by example from some of the best code available, selected to
 cover a wide range of SciPy and related libraries. (These include scikit-learn,
 scikit-image, toolz, and pandas.)
 
-Similarly, advanced readers may discover new, refreshing ways of looking at the
-libraries they use every day.
-
 Thus the book aims to point readers in the direction of excellent code in the
-scientific domain.
+scientific domain. For its core audience of recent Software Carpentry graduates
+and self-taught learners, the book will:
+
+1. Introduce them to Scientific Python and its community.
+2. Show them the most fundamental parts of SciPy and related libraries, while
+   showing some of the principles of writing good, robust software.
+3. Give them a taste of beautiful, easy-to-read code, which hopefuly they will
+   carry with them to their practice.
+
+Advanced readers may discover new, refreshing ways of looking at the
+libraries they use every day.
 
 ### List the four or five topics covered or features included that will provide the greatest benefit to readers or will be the most likely to excite them? 
 
@@ -213,6 +247,15 @@ to specific tasks. Here, we instead aim for broad coverage of SciPy.
 
 ## Book Outline (chapter level is fine):
 
+The goal of this book for the reader is to fast track them through high-quality
+code. Their reaction with the first example might be "Wow, I'd never be
+able to come up with that." But, by the time they have finished the book, they
+should find each example still very clever, yes, but something that they
+themselves could have written in an inspired moment.
+
+Except for the Preface and Chapter 1, the below chapters are intended as a
+guideline 
+
 *Preface:* why SciPy? Ecosystem and community. Conventions (e.g. NumPy docstring
 conventions).
 
@@ -246,8 +289,8 @@ as possible.
 
 ### How many pages do you expect the book to be?
 
-Unsure yet.
+200-250 pages.
 
 ### How long do you expect it to take you to write the book?
 
-Unsure. 6mo? Looking for guidance given similar books.
+About 9 months.
