@@ -317,3 +317,8 @@ and follow best practices, to contribute to SciPy and related packages.
 ### How long do you expect it to take you to write the book?
 
 About 9 months.
+
+The book will be written as IPython notebooks in a public repository and we
+will request feedback during writing from key audiences (to which we have ready
+access, since we all teach Python/SWC relatively frequently), ensuring that the
+book meets the needs of its intended audience.
