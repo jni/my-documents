@@ -3,14 +3,19 @@ Book Proposal
 
 Proposed Book Title: **Elegant SciPy**
 
-Proposed Book Subtitle: **Learn Scientific Python from the best code on the
-    internet.**
+Proposed Book Subtitle: **Learn Scientific Python from the best code on the internet.**
 
-Author(s): **Juan Nunez-Iglesias** (1-2 additional co-author(s) TBD)
+Author(s): **Juan Nunez-Iglesias**,
+**Stéfan van der Walt**,
+**Harriet Dashnow**
 
 Author title(s) and affiliation(s):
 
 **JNI: Research Scientist, Victorian Life Science Computation Initiative, University of Melbourne**
+
+**SJVDW: Stellenbosch University / UC Berkeley**
+
+**HD: Bioinformatician, Life Sciences Computation Centre, University of Melbourne**
 
 Preferred mailing address(es):
 
@@ -51,12 +56,17 @@ Google Summer of Code '14.
 
 ### Author Web site/blog/Twitter: 
 
-[http://ilovesymposia.com](http://ilovesymposia.com)
+[http://ilovesymposia.com](http://ilovesymposia.com), 
+[@jnuneziglesias](https://twitter.com/jnuneziglesias), 
+[Github: jni](https://github.com/jni)
 
-[@jnuneziglesias](https://twitter.com/jnuneziglesias)
+[http://mentat.za.net](http://mentat.za.net), 
+[@stefanvdwalt](https://twitter.com/stefanvdwalt), 
+[Github: stefanv](https://github.com/stefanv)
 
-[Github: jni](http://github.com/jni)
-
+[Harriet Dashnow Researcher page](https://www.vlsci.org.au/researcher/hdashnow), 
+[@hdashnow](https://twitter.com/hdashnow), 
+[Github: hdashnow](https://github.com/hdashnow)
 
 ### Why are you the best person to write this book?
 
@@ -73,6 +83,17 @@ eye for what great code looks like. Some examples will be from those pull
 requests, but the majority will come from polling developers from the
 Scientific Python ecosystem, many of whom I know personally from two SciPy
 conferences, EuroSciPy 2013, and PyConAu 2014.
+
+Stéfan van der Walt is the creator of the scikit-image library, and a frequent
+contributor to SciPy and other scientific libraries, and has organised
+several of the SciPy conferences. His breadth of knowledge eclipses mine and
+will help to develop many of the chapters.
+
+Harriet Dashnow is a bioinformatician and an excellent writer. (See, for
+example, her hilarious [Ten Simple Rules for Writing a PLOS Ten Simple Rules
+Article](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003858).)
+She recently started using Python and is thus part of the target audience for
+the book.
 
 ## Book Summary:
 
@@ -92,7 +113,9 @@ The examples will be chosen to highlight clever, elegant uses of advanced
 features of NumPy, SciPy, and related libraries. The beginning reader will
 learn not the functionality of the library, but its application to real
 world problems using beautiful code. The book will start from first principles
-and provide all of the necessary background to understand each example.
+and provide all the necessary background to understand each example,
+including idioms, libraries (e.g. iterators), and scientific concepts. Examples
+will use actual scientific data.
 
 This book will introduce readers to Scientific Python and its community, show
 them the fundamental parts of SciPy and related libraries, and give them a
@@ -200,13 +223,10 @@ The SciPy community (preface). Sounds dry but will include nice touches such as
 good package names, such as airspeed velocity and sux.
 
 n-dimensional image processing (includes numpy array memory representation,
-filters, processor cache and efficiency)
+filters, processor cache and efficiency), Fourier transforms, streaming data
+processing (toolz), sparse matrices.
 
-Interesting applications of Fourier transforms
-
-toolz and streaming data processing
-
-sparse matrices: effective use of internal storage structures
+Contributing to open-source projects in the SciPy ecosystem.
 
 ## Other Book Features and Video Offerings:
 
@@ -254,7 +274,7 @@ should find each example still very clever, yes, but something that they
 themselves could have written in an inspired moment.
 
 Except for the Preface and Chapter 1, the below chapters are intended as a
-guideline 
+guideline.
 
 *Preface:* why SciPy? Ecosystem and community. Conventions (e.g. NumPy docstring
 conventions).
@@ -284,6 +304,9 @@ Matt Rocklin's Toolz)
 scikit-image, pandas, astropy, etc. The exact contents will be determined by
 code submissions, which will be triaged to canvas as wide a footprint of SciPy
 as possible.
+
+*Chapter -1:* Contributing to the SciPy ecosystem: how to use git and github,
+and follow best practices, to contribute to SciPy and related packages.
 
 ## Specs and Schedule:
 
