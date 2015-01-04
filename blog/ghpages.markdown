@@ -3,7 +3,7 @@
 Understatement: I'm not much of a web developer. However, we all have to become
 a little bit versed in web-dev if we want to publish things these days. GitHub
 Pages makes it really easy to publish a site (check out the
-[official guide](https://pages.github.com) and Thinkful's truly excellent
+[official guide](https://pages.github.com), and Thinkful's truly excellent
 [interactive getting started guide](http://www.thinkful.com/learn/a-guide-to-using-github-pages/)).
 
 If you just want to publish a static set of html files using absolute paths,
@@ -13,7 +13,7 @@ full-fledged websites.
 The process is definitely full of gotchas, though, and you'll run into issues
 for anything other than single pages. I'm making this list for my own future
 reference, and so that I can finally close the umpteen tabs I have open on the
-topic. =P But I hope someone else will find it useful!
+topic! But I hope someone else will find it useful.
 
 ## 1. Jekyll lets you write Markdown, but it's not GitHub-Flavored Markdown
 
@@ -65,14 +65,14 @@ served needs to have a header called the
 [Front Matter](http://jekyllrb.com/docs/frontmatter/).** Other markdown files
 will be publicly accessible but they will be treated as plaintext files.
 
-*How* the markdown files get
-served also varies depending on your `_config.yml` and the
-[`permalink` variable](http://jekyllrb.com/docs/permalinks/). The annoying
-thing is that the documentation I just linked to is entirely centred on blog
+*How* the markdown files get served also varies depending on your `_config.yml`
+and the `permalink` variable. The annoying thing is that the
+[documentation](https://github.com/jekyll/jekyll/issues/1293)
+on this is entirely centred on blog
 posts, with little indication about what happens to top-level pages. In the
 case of the `pretty` setting, `filename.markdown`, for example, gets served at
 `base.url/filename/`, *unless* you set the page's `permalink` attribute
-manually in the Front Matter, for example as `title.html` or `title/`.
+manually in the Front Matter, for example to `title.html` or `title/`.
 
 ## 4. Relative paths don't work on GH-Pages
 
@@ -84,7 +84,7 @@ missing once you deploy to Pages.
 The problem is that Jekyll assumes that your site lives at the root URL (i.e.
 `username.github.io`), when it is in fact in `username.github.io/my-site`.
 
-The solution was developed by [Matt Swensen](https://github.com/mjswensen)
+The solution was developed by Matt Swensen
 [here](https://github.com/jekyll/jekyll/issues/332#issuecomment-18952908): You
 need to set a `baseurl` variable in your `_config.yml`. This should be your
 repository name. For example, if you post your site to the `gh-pages` branch of
